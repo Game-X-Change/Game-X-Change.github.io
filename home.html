@@ -1,0 +1,93 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>Home</title>
+</head>
+<body>
+<div class="topbar">
+  <img class="logo" src="https://arizonachristian.edu/wp-content/uploads/2017/06/logo-placeholder.png">
+    <a href="https://en-gb.facebook.com/">
+  <img class="socialicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/600px-Facebook_logo_%28square%29.png">
+  </a>
+  <a href="https://twitter.com/">
+  <img class="socialicon" src="https://fergusscottishfestival.com/wp-content/uploads/2018/02/t.png">
+  </a>
+</div>
+<div class="topnav">
+  <a class="active" href="home.html">Home</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+<div class="sep">
+</div>
+<div class="scroll-left">
+<p id="news">test</p>
+</div>
+<div class="test">
+<img class="mySlides" src="https://wallpapercave.com/wp/XMnhQSq.jpg">
+<img class="mySlides" src="http://getwallpapers.com/wallpaper/full/5/6/a/39229.jpg">
+<img class="mySlides" src="https://i.pinimg.com/originals/f1/12/94/f11294f1ef56a6aa44571487785b582f.jpg">
+</div>
+<div class="sideimage">
+  <p>hello</p>
+</div>
+<div class="imagedesc" id="imagedesc">
+<p>Image Description </p>
+</div>
+<div>
+<p>test</p>
+</div>
+<script>
+var slideIndex = 0;
+carousel();
+var newsIndex = 0;
+newscarousel();
+var descIndex = 0;
+desccarousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+
+function newscarousel() {
+      if (newsIndex == 0) {
+        document.getElementById("news").innerHTML = "News:Testing Scrolling";
+      }
+      if (newsIndex == 1) {
+        document.getElementById("news").innerHTML = "News:Testing";
+      }
+      if (newsIndex == 2) {
+        document.getElementById("news").innerHTML = "News:Scrolling";
+      }
+    //}
+    newsIndex++;
+    if (newsIndex > 2) {newsIndex = 0;} 
+    setTimeout(newscarousel, 10000); // Change image every 10 seconds
+}
+function desccarousel() {
+      if (descIndex == 0) {
+        document.getElementById("imagedesc").innerHTML = "Mountain View";
+      }
+      if (descIndex == 1) {
+        document.getElementById("imagedesc").innerHTML = "Log Cabin";
+      }
+      if (descIndex == 2) {
+        document.getElementById("imagedesc").innerHTML = "Watercolor Steampunk";
+      }
+    //}
+    descIndex++;
+    if (descIndex > 2) {descIndex = 0;} 
+    setTimeout(desccarousel, 5000); // Change image every 5 seconds
+}
+</script>
+</body>
+</html>

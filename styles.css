@@ -1,0 +1,126 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #597A7F;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #52BCCC;
+    color: white;
+}
+.mySlides {
+	display: block;
+    width: 75%;
+    float: left;
+}
+.slideshowbutton {
+	text-align: center;
+	display: inline-block;
+}
+
+.scroll-left p {
+position: absolute;
+width: 100%;
+height: 100%;
+margin: 0;
+text-align: center;
+/* Starting position */
+-moz-transform:translateX(50%);
+-webkit-transform:translateX(50%); 
+transform:translateX(50%);
+/* Apply animation to this element */ 
+-moz-animation: scroll-left 10s linear infinite;
+-webkit-animation: scroll-left 10s linear infinite;
+animation: scroll-left 10s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+0% { -moz-transform: translateX(50%); }
+100% { -moz-transform: translateX(-50%); }
+}
+@-webkit-keyframes scroll-left {
+0% { -webkit-transform: translateX(50%); }
+100% { -webkit-transform: translateX(-50%); }
+}
+@keyframes scroll-left {
+0% { 
+-moz-transform: translateX(50%); /* Browser bug fix */
+-webkit-transform: translateX(50%); /* Browser bug fix */
+transform: translateX(50%); 
+}
+100% { 
+-moz-transform: translateX(-50%); /* Browser bug fix */
+-webkit-transform: translateX(-50%); /* Browser bug fix */
+transform: translateX(-50%); 
+}
+}
+.scroll-left {
+color: white;
+background-color: black;
+height: 20px; 
+overflow: hidden;
+position: relative;
+}
+
+.sideimage {
+    width: 25%;
+    height: 86.5%;
+    float: right;
+}
+
+.imagedesc {
+    clear: both;
+    width: 1413px;
+    border: 1px solid black;
+}
+
+.topbar {
+    background-color: #597A7F;
+    height: 95px;
+    width: 100%;
+}
+
+.logo {
+    width: auto;
+    height: 80px;
+    padding: 5px;
+}
+
+.sep {
+    height: 10px;
+    width: 100%;
+    background-color: #52BCCC;
+}
+
+.socialicon {
+    height: 48px;
+    width: auto;
+    float: right
+}
+
+.socialtext {
+    float: right;
+    text-align: center;
+    color: white;
+}
+
+.align {
+    float: right;
+}

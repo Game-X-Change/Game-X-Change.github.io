@@ -1,0 +1,33 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>Practice: Home</title>
+</head>
+<div class="topnav">
+  <a href="home.html">Home</a>
+  <a class="active" href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+<div class="test">
+<img class="mySlides" src="https://wallpapercave.com/wp/XMnhQSq.jpg">
+<img class="mySlides" src="http://getwallpapers.com/wallpaper/full/5/6/a/39229.jpg">
+<img class="mySlides" src="https://i.pinimg.com/originals/f1/12/94/f11294f1ef56a6aa44571487785b582f.jpg">
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+</div>
+</html>
